@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Linha do tempo Samsung</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="./img/5969254.png" type="image/x-icon">
+    <style>
+        
+    
+body {
+	background: url "./img/aDtlFG(1).webp";
+	margin:0;
+	font-family: 'Roboto Condensed', sans-serif;
+	background-color: black;
+	background-image: url(./img/stars_milky_way_space_116893_3840x2160.jpg);
+	background-size: cover;	
+	background-attachment: fixed;
+}
+
+#progress-content-section {
+	width:90%;
+	margin: auto;
+	background: hsla(0, 0%, 0%, 0.7);
+	border-radius: 4px;
+	border-radius: 25px;
+}
+
+.celular {
+	width: 50%;
+}
+ 
+h1 {
+	 	  
+	color:white;
+	font-weight:700;
+	margin-top:125px;	 
+	text-align:center;
+	text-transform:uppercase;
+	letter-spacing:4px;
+	line-height:23px;
+}
+
+
+.process-wrapper {
+	margin:auto;
+	max-width:1080px;
+}
+
+#progress-bar-container {
+	position:relative;
+	width:90%;
+	margin:auto;
+	height:100px;
+	margin-top:65px;
+}
+
+#progress-bar-container ul {
+	padding:0;
+	margin:0;
+	padding-top:15px;
+	z-index:9999;
+	position:absolute;
+	width:100%;
+	margin-top:-40px
+}
+
+#progress-bar-container li:before {
+	content:" ";
+	display:block;
+	margin:auto;
+	width:30px;
+	height:30px;
+	border-radius:50%;
+	border:solid 2px #aaa;
+	transition:all ease 0.3s;
+     
+}
+
+#progress-bar-container li.active:before, #progress-bar-container li:hover:before {
+	border:solid 2px #fff;
+       	 
+	background: linear-gradient(to right, #207893 0%, black 100%); 
+}
+
+#progress-bar-container li {
+	list-style:none;
+	float:left;
+	width:20%;
+	text-align:center;
+	color:#aaa;
+	text-transform:uppercase;
+	font-size:11px;
+	cursor:pointer;
+	font-weight:700;
+	transition:all ease 0.2s;
+	vertical-align:bottom;
+	height:60px;
+	position:relative;
+}
+
+#progress-bar-container li .step-inner {
+	position:absolute;
+	width:100%;
+	bottom:0;
+    font-size: 14px;
+}
+
+#progress-bar-container li.active, #progress-bar-container li:hover {
+	color:#fff;
+}
+
+#progress-bar-container li:after {
+	content:" ";
+	display:block;
+	width:6px;
+	height:6px;
+	background:#777;
+	margin:auto;
+	border:solid 7px #fff;
+	border-radius:50%;
+	margin-top:40px;
+	box-shadow:0 2px 13px -1px rgba(0,0,0,0.3);
+	transition:all ease 0.2s;
+     
+}
+
+#progress-bar-container li:hover:after {
+	background:#555;
+}
+
+#progress-bar-container li.active:after {
+	background:#207893;
+}
+
+#progress-bar-container #line {
+	width:80%;
+	margin:auto;
+	background: #eee;
+	height:6px;
+	position:absolute;
+	left:10%;
+	top:57px;
+	z-index:1;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+#progress-bar-container #line-progress {
+	content:" ";
+	width:3%;
+	height:100%;
+	background: #207893;	 
+	background: linear-gradient(to right, #207893 0%,#2ea3b7 100%); 
+	position:absolute;
+	z-index:2;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+#progress-bar-container #line2 {
+	width:80%;
+	margin:auto;
+	background: #eee;
+	height:6px;
+	position:absolute;
+	left:10%;
+	top:170px;
+	z-index:1;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+
+#progress-bar-container #line-progress2 {
+	content:" ";
+	width:3%;
+	height:100%;
+	background: #207893;	 
+	background: linear-gradient(to right, #207893 0%,#2ea3b7 100%); 
+	position:absolute;
+	z-index:2;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+#progress-bar-container #line3 {
+	width:80%;
+	margin:auto;
+	background: #eee;
+	height:6px;
+	position:absolute;
+	left:10%;
+	top:283px;
+	z-index:1;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+
+#progress-bar-container #line-progress3 {
+	content:" ";
+	width:3%;
+	height:100%;
+	background: #207893;	 
+	background: linear-gradient(to right, #207893 0%,#2ea3b7 100%); 
+	position:absolute;
+	z-index:2;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+#progress-bar-container #line4 {
+	width:80%;
+	margin:auto;
+	background: #eee;
+	height:6px;
+	position:absolute;
+	left:10%;
+	top:396px;
+	z-index:1;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+
+#progress-bar-container #line-progress4 {
+	content:" ";
+	width:3%;
+	height:100%;
+	background: #207893;	 
+	background: linear-gradient(to right, #207893 0%,#2ea3b7 100%); 
+	position:absolute;
+	z-index:2;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+#progress-bar-container #line5 {
+	width:20%;
+	margin:auto;
+	background: #eee;
+	height:6px;
+	position:absolute;
+	left:10%;
+	top:509px;
+	z-index:1;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+
+#progress-bar-container #line-progress5 {
+	content:" ";
+	width:3%;
+	height:100%;
+	background: #207893;	 
+	background: linear-gradient(to right, #207893 0%,#2ea3b7 100%); 
+	position:absolute;
+	z-index:2;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+
+
+#progress-content-section .section-content {
+	padding:30px 40px;
+	text-align:center;
+}
+
+#progress-content-section .section-content h2 {
+	font-size:17px;
+	text-transform:uppercase;
+	color:#fff;
+	letter-spacing:1px;
+}
+
+#progress-content-section .section-content p {
+	font-size:16px;
+	line-height:1.8em;
+	color:#fff;
+}
+
+#progress-content-section .section-content {
+	margin-top: 28rem;
+	display:none;
+	animation: FadeInUp 700ms ease 1;
+	animation-fill-mode:forwards;
+	transform:translateY(15px);
+	opacity:0;
+}
+
+#progress-content-section .section-content.active {
+	display:block;
+}
+
+.logo{
+	margin-left: 30em;
+	margin-top: 5rem;
+	width: 25%;
+}
+
+@keyframes FadeInUp {
+	0% {
+		transform:translateY(15px);
+		opacity:0;
+	}
+	
+	100% {
+		transform:translateY(0px);
+		opacity:1;
+	}
+}
+
+ 
+    </style>
+</head>
+<body>
+ <img src="./img/samsung-logo-4.png" alt="" class="logo">
+
+<h1>LINHA DO TEMPO <SPAN>SAMSUNG</SPAN> GALAXY</h1>
+<br> 
+<div class="process-wrapper">
+<div id="progress-bar-container">
+	<ul>
+		<li class="step step01 active"><div class="step-inner">Samsung Galaxy S</div></li>
+		<li class="step step02"><div class="step-inner">Samsung Galaxy S II</div></li>
+		<li class="step step03"><div class="step-inner">Samsung Galaxy S III</div></li>
+		<li class="step step04"><div class="step-inner">Samsung Galaxy S4</div></li>
+		<li class="step step05"><div class="step-inner">Samsung Galaxy S5</div></li>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<li class="step step06"><div class="step-inner">Samsung Galaxy S6</div></li>
+		<li class="step step07"><div class="step-inner">Samsung Galaxy S6 edge</div></li>
+		<li class="step step08"><div class="step-inner">Samsung Galaxy S7</div></li>
+		<li class="step step09"><div class="step-inner">Samsung Galaxy S7 edge</div></li>
+		<li class="step step10"><div class="step-inner">Samsung Galaxy S8</div></li>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<li class="step step11"><div class="step-inner">Samsung Galaxy S9</div></li>
+		<li class="step step12"><div class="step-inner">Samsung Galaxy S10</div></li>
+		<li class="step step13"><div class="step-inner">Samsung Galaxy S20</div></li>
+		<li class="step step14"><div class="step-inner">Samsung Galaxy S20 Ultra</div></li>
+		<li class="step step15"><div class="step-inner">Samsung Galaxy S20 FE</div></li>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<li class="step step16"><div class="step-inner">Samsung Galaxy S21</div></li>
+		<li class="step step17"><div class="step-inner">Samsung Galaxy S21 Ultra</div></li>
+		<li class="step step18"><div class="step-inner">Samsung Galaxy S21 FE</div></li>
+		<li class="step step19"><div class="step-inner">Samsung Galaxy S22</div></li>
+		<li class="step step20"><div class="step-inner">Samsung Galaxy S22 Ultra</div></li>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<li class="step step21"><div class="step-inner">Samsung Galaxy S23</div></li>
+		<li class="step step22"><div class="step-inner">Samsung Galaxy S23 Ultra</div></li>
+	</ul>
+	
+	<div id="line">
+		<div id="line-progress"></div>
+	</div>
+	<div id="line2">
+		<div id="line-progress2"></div>
+	</div>
+	<div id="line3">
+		<div id="line-progress3"></div>
+	</div>
+	<div id="line4">
+		<div id="line-progress4"></div>
+	</div>
+	<div id="line5">
+		<div id="line-progress5"></div>
+	</div>
+</div>
+
+<div id="progress-content-section">
+	<div class="section-content discovery active">
+		<img class="celular" src="./btbb/s.png" alt="">
+		<h2>Samsung Galaxy S</h2>
+		<p>Lançado pela primeira vez em Junho de 2010, o Samsung Galaxy S funcionava no Android 2.1 e tinha um ecrã de 800 x 480 Super AMOLED. Tinha também um processador de um só núcleo de 1GHz e 0,5GB de RAM. <br>
+
+		A câmera traseira tinha 5 megapixels, enquanto que a frontal tinha apenas 0,3 megapixels. O que realmente se destacou sobre ela foi a personalização do Android. Embora tivéssemos visto alguns dos TouchWiz noutros dispositivos, parecia que funcionava no Galaxy S.</p>
+	</div>
+	
+	<div class="section-content strategy">
+		<img class="celular" src="./btbb/s2.png" alt="">
+		<h2>Samsung Galaxy S II</h2>
+		<p>Também conhecido como Samsung Galaxy S II, o celular renovado foi lançado em Abril de 2011 e ostentava um ecrã 800 x 480 semelhante ao do seu predecessor. O processador recebeu um choque até ao dual-core e 1,2GHz, e havia 0,75GB de RAM. <br>
+
+		A câmera traseira era de 8 megapixels desta vez, com uma câmera frontal de 2 megapixels. A Samsung adoptou widgets com a Galaxy S II, algo que o HTC estava realmente a empurrar..</p>
+	</div>
+	
+	<div class="section-content creative">
+		<img class="celular" src="./btbb/s3.png" alt="">
+		<h2>Samsung Galaxy S III</h2>
+		<p>Mais uma vez, mantendo os números romanos, por isso tecnicamente conhecidos como Samsung Galaxy S III, este modelo saiu em Maio de 2012 e foi o primeiro da série a ter um ecrã HD. A sua resolução de 1280 x 720 era bastante revolucionária na altura. Também suportava o modelo Android 4.0 Ice Cream Sandwich. <br>
+
+		Havia um processador quad-core de 1,4GHz com 1GB de RAM no lançamento, embora a Samsung tenha ficado com uma câmera traseira de 8 megapixels. Estava ligeiramente mais esculpido do que o telefone anterior e parecia que a Samsung queria empurrar o design com um pouco mais de força.</p>
+	</div>
+	
+	<div class="section-content production">
+		<img class="celular" src="./btbb/s4.png" alt="">
+		<h2>Samsung Galaxy S4</h2>
+		<p>Lançado em Abril de 2013, e abandonando os numerais romanos que ninguém usava quando se referia aos telefones Galaxy, o Galaxy S4 tinha um visor Full HD de 5 polegadas. Também aumentou o poder de processamento para um chip quad-core de 1,9GHz, com 2GB de RAM. <br>
+
+		A câmera traseira também teve um salto, até 13 megapixels. A sensação de design que tínhamos tido a partir do S3 passou realmente por aqui: o Galaxy S4 era um ótimo telefone, apenas parecia e sentia-se bem.</p>
+	</div>
+	
+	<div class="section-content analysis">
+		<img class="celular" src="./btbb/s5.png" alt="">
+		<h2>Samsung Galaxy S5</h2>
+		<p>Vindo em Abril de 2014, o Samsung Galaxy S5 também tinha um ecrã Full HD, mas era ligeiramente maior, medindo 5,1 polegadas (um modelo LTE-A acabou por subir isso para 2560 x 1440). <br>
+
+		Havia um processador quad-core de 2,5GHz a bordo, com 2GB de RAM. E a câmera traseira foi mais uma vez melhorada, para um módulo de 16 megapixels. Mas a coisa mais interessante sobre a Galaxy S5 estava à volta da traseira, com uma textura como um gesso pegajoso. A Samsung ainda estava a utilizar as costas de plástico removíveis nesta altura.</p>
+	</div>
+	<div class="section-content s6">
+		<img class="celular" src="./btbb/s6.png" alt="">
+		<h2>Samsung Galaxy S6</h2>
+		<p>A linha Galaxy S de Abril de 2015 foi a primeira a oferecer dois dispositivos separados ao mesmo tempo. O Galaxy S6 mais padrão apresentava um visor plano 2560 x 1440 Quad HD Super AMOLED, medindo 5,1 polegadas, enquanto a Samsung se movia para abraçar arestas curvas, resultando no Galaxy S6 Edge e no S6 Edge Plus. Foi um momento decisivo para a série Galaxy S, algo que continuou durante muitos anos. <br>
+
+		Funcionava com um processador Exynos octa-core fabricado pela Samsung, tinha 3GB de RAM e uma câmera traseira de 16 megapixels capaz de gravar em Ultra HD. Foi adotada uma câmera de 5 megapixels para a frente.</p>
+	</div>
+	<div class="section-content s6e">
+		<img class="celular" src="./btbb/s6E.png" alt="">
+		<h2>Samsung Galaxy S6 Edge</h2>
+		<p>Tal como o seu companheiro estável também lançado em Abril de 2015, o Samsung Galaxy S6 Edge tinha um ecrã Quad HD de 5,1 polegadas, processador octa-core, 3GB de RAM, câmera traseira de 16 megapixels e câmera frontal de 5 megapixels. <br>
+
+		A diferença é que os lados do ecrã são curvados e enrolados para dar a ilusão de não haver luneta uma alternativa radical na altura. Havia também um modelo Galaxy S6 edge+.</p>
+	</div>
+	<div class="section-content s7">
+		<img class="celular" src="./btbb/s7.png" alt="">
+		<h2>Samsung Galaxy S7</h2>
+		<p>O Samsung Galaxy S7 foi anunciado em Fevereiro de 2016 e veio com um ecrã de 5,1 polegadas de QHD (2560 x 1440). <br>
+
+			Tal como o S6 antes dele, era a versão de ecrã plano de dois aparelhos, mas adicionou uma câmera de 12 megapixels de duplo pixel para melhor fotografia com pouca luz e um processador octa-core mais rápido. <br>
+			
+			A Samsung Pay foi ativada ao telefone, que podia funcionar através de sistemas de NFC e de banda magnética.</p>
+	</div>
+	<div class="section-content s7e">
+		<img class="celular" src="./btbb/s7e.png" alt="">
+		<h2>Samsung Galaxy S7 edge</h2>
+		<p>Tudo girava em torno daquelas curvas no bordo do Samsung Galaxy S7 e uma sensação de que as exposições da Samsung eram inigualáveis. <br>
+
+			A borda Galaxy S7 era um verdadeiro telefone de bandeira em todos os aspectos. Também foi anunciado em Fevereiro de 2016 e o seu visor de 5,5 polegadas de borda dupla QHD era simplesmente soberbo. <br>
+			
+			Todas as mesmas características que o S7 estavam a bordo e o design era mais redondo do que a borda S6 que o precedeu.</p>
+	</div>
+	<div class="section-content s8">
+		<img class="celular" src="./btbb/s8.png" alt="">
+		<h2>Samsung Galaxy S8</h2>
+		<p>O Samsung Galaxy S8 foi o primeiro a apresentar o Infinity Display, que se referia ao facto de ter um ecrã de ponta a ponta praticamente sem luneta. O botão de casa montado na frente foi movido também para trás, embora numa posição ligeiramente embaraçosa - algo que a Samsung deveria corrigir com o S9. <br>
+
+			Embora houvesse também uma segunda variante no S8 Plus, que vinha com um ecrã maior e melhor bateria, mas o Galaxy S8 standard veio com bordas curvas como padrão, afastando-se de um modelo standard plano. </p>
+	</div>
+	<div class="section-content s9">
+		<img class="celular" src="./btbb/s9.png" alt="">
+		<h2>Samsung Galaxy S9</h2>
+		<p>À superfície, o Samsung Galaxy S9 parece muito semelhante ao S8 a partir de 2017. O telefone ainda oferecia aquele desenho de aresta curva e vem com um ecrã OLED de 5,8 polegadas e era, mais uma vez, à prova de água. <br>
+
+			O Galaxy S9 também ofereceu emoji AR, o que permite ao telefone criar um avatar 3D digitalizando o seu rosto e criando uma gama de emoji personalizados para si. Estes podem ser utilizados ao conversar no WhatsApp ou no Facebook Messenger, por exemplo, em vez de utilizar emoji básicos. <br>
+			
+			O Samsung Galaxy S9+ também foi lançado juntamente com o S9, oferecendo uma câmera principal de dupla abertura que foi um passo acima do ano anterior. </p>
+	</div>
+	<div class="section-content s10">
+		<img class="celular" src="./btbb/s10.png" alt="">
+		<h2>Samsung Galaxy S10</h2>
+		<p>O Samsung Galaxy S10 lançado juntamente com o S10+, o S10e mais acessível e um modelo 5G. <br>
+
+			O carro-chefe de 2019 da Samsung apresentava muitas das mesmas facetas de design que conhecemos e adoramos. Houve também algumas melhorias com este modelo que incluíram conceitos líderes de mercado, como o sensor de impressões digitais UltraSonic. <br>
+			
+			Um sistema de câmera tripla, sugestões inteligentes de câmera automática e carregamento invertido sem fios também fizeram deste outro carro-chefe a bater. Tinha também uma câmera de furos na frente.</p>
+	</div>
+	<div class="section-content s20">
+		<img class="celular" src="./btbb/s20.png" alt="">
+		<h2>Samsung Galaxy S20</h2>
+		<p>O telefone principal da Samsung para 2020 era o Samsung Galaxy S20. Havia também mais variantes premium no Galaxy S20+ e no S20 Ultra (abaixo). <br>
+
+			O aparelho padrão levou o conceito de Infinity Display mais longe - quase eliminando completamente a luneta. Também comutou a câmera frontal do furo de função para o centro. Os tamanhos do ecrã do S20 e S20+ eram de 6,2 e 6,7 polegadas respectivamente, com resoluções Quad HD+ (3200 x 1440). Tinham também scanners de impressões digitais no ecrã, como os seus antecessores S10. <br>
+			
+			Talvez o maior salto geracional tenha vindo com uma tela para uma taxa de atualização de 120Hz, câmeras de lente tripla em ambas, e a S20+ também recebendo uma câmera Timeof-Flight. Ambos os telefones estavam habilitados para 5G, com uma versão 4G do S20 também disponível.</p>
+	</div>
+	<div class="section-content s20U">
+		<img class="celular" src="./btbb/s20U.png" alt="">
+		<h2>Samsung Galaxy S20 Ultra</h2>
+		<p>Havia um novo nível de telefone em 2020, o lançamento do Samsung Galaxy S20 Ultra. Tinha um ecrã mamute - 6,9 polegadas, Quad HD+ (3200 x 1440) e 120Hz - mas talvez fosse melhor recordado em termos de design pela sua enorme unidade de câmera na parte de trás. <br>
+
+		Além de um sensor de tempo de luz, as câmares de ultra-som de 108 megapixel principal, 48 megapixel 10x telefoto, e 12 megapixel ultrawide. Era também capaz de até 100x "Space Zoom" para alguma fotografia de longo alcance espantosa.</p>
+	</div>
+	<div class="section-content s20FE">
+		<img class="celular" src="./btbb/s20Fe.png" alt="">
+		<h2>Samsung Galaxy S20 Fe</h2>
+		<p>O Samsung Galaxy S20 FE (edição em leque) chegou como uma opção mais acessível, mas ao contrário do Galaxy S10e, não se sentiu comprometido. <br>
+
+		Com um preço mais acessível do que os modelos S20, correspondia à potência - com Snapdragon 865 a nível global - tinha um grande visor e a potência de câmera dos modelos S20. <br>
+			
+		A construção era ligeiramente mais barata e tinha um visor plano, mas oferecia uma excelente relação qualidade/preço. A linha FE continuou a sentar-se nesta posição como uma atualização a meio do ano com especificações de bandeira.</p>
+	</div>
+	<div class="section-content s21">
+		<img class="celular" src="./btbb/s21.png" alt="">
+		<h2>Samsung Galaxy S21</h2>
+		<p>O Samsung Galaxy S21 e o Galaxy S21+ de maiores dimensões levaram a linha telefónica da nave principal numa direcção ligeiramente diferente. Embora fossem um pouco mais baratos do que o preço de lançamento dos modelos S20 em 2020, houve um par de movimentos - reduzindo o visor para 1080p e mudando para um verso de plástico - que justificaram a redução do preço. Também regressou a um ecrã plano, como o Galaxy S7. <br>
+
+		Mas eram ainda poderosos dispositivos de nível de bandeira, com um arranjo de câmera triplo e oferecendo taxas de atualização adaptativas para aquele ecrã, por isso, embora fosse apenas 1080p, ainda oferecia 120Hz. Mas ao mover-se ligeiramente para baixo em posição, significava que o S21 Ultra era o carro-chefe claro da Samsung em 2021.</p>
+	</div>
+	<div class="section-content s21U">
+		<img class="celular" src="./btbb/s21U.png" alt="">
+		<h2>Samsung Galaxy S21 Ultra</h2>
+		<p>Enquanto a maior parte da atenção estará na enorme unidade de câmera nas costas, a Samsung tentou mudar o tópico de conversa para o acabamento Phantom Black do Samsung Galaxy S21 Ultra. Foi um visual e toque de primeira para o telefone de topo da Samsung. Com os modelos S21 a descer ligeiramente no posicionamento, houve um foco renovado no que o S21 Ultra oferecia, com uma oportunidade de melhorar em áreas que ficaram em falta no S20 Ultra. <br>
+
+		Nova tecnologia de visualização e um repensar das câmeras na parte de trás, feito para um pacote mais atrativo, com a Samsung a procurar reafirmar-se como o telefone de bandeira a cobiçar - e agora o único modelo com um visor curvo.</p>
+	</div>
+	<div class="section-content s21fe">
+		<img class="celular" src="./btbb/s21fe.png" alt="">
+		<h2>Samsung Galaxy S21 FE</h2>
+		<p>Um pouco mais tarde que a sua antecessora, a Samsung Galaxy S21 FE foi lançada em Janeiro de 2022, pouco antes do lançamento da gama Galaxy S22. <br>
+
+		Oferecendo muitas das mesmas características de design que a gama Galaxy S21, a principal diferença no S21 FE foi a câmera traseira colorida. No que diz respeito ao tamanho, ela estava situada entre o S21 e o S21+ e também oferecia muitas das mesmas características, incluindo um ecrã de 120Hz, embora não fosse tão capaz como o S21. <br>
+			
+		Tal como a S20 FE, a S21 FE atingiu um ponto doce em termos de preço e características, com principalmente apenas uma descida na câmera para permitir o preço mais barato.</p>
+	</div>
+	<div class="section-content s22">
+		<img class="celular" src="./btbb/s22.png" alt="">
+		<h2>Samsung Galaxy S22</h2>
+		<p>O Galaxy S22 da Samsung foi uma atualização interativa do Galaxy S21. Mais uma vez havia dois modelos - o S22 com um ecrã de 6,1 polegadas e o Galaxy S22+ com um ecrã de 6,6 polegadas. <br>
+
+		Fora destas diferenças de tamanho, estes telefones eram basicamente os mesmos, oferecendo o mesmo design e construção, as mesmas cores, a mesma potência e hardware. Havia uma diferença na capacidade da bateria, é claro. <br>
+			
+		Ambos estes telefones também partilhavam características com o Galaxy S22 Ultra, que regressou como carro-chefe da Samsung em 2022.</p>
+	</div>
+	<div class="section-content s22u">
+		<img class="celular" src="./btbb/s22U (1).png" alt="">
+		<h2>Samsung Galaxy S22 Ultra</h2>
+		<p>Atualizando a nave principal da gama, o Samsung Galaxy S22 Ultra suportou a caneta S e alojou-a internamente, pelo que muitos viram isto também como um substituto para a série Galaxy Note. <br>
+
+		De fato, o design mudou ligeiramente nesses alojamentos, mas este dispositivo ainda estava embalado no carregamento da câmera superior da Samsung a partir dos anteriores telefones Ultra. <br>
+			
+		Tudo se resumia a números com uma câmera principal de 108MP, um visor de 6,8 polegadas e uma grande bateria - e o mais recente hardware disponível para 2022.</p>	
+	</div>
+	<div class="section-content s23">
+		<img class="celular" src="./btbb/s23.png" alt="">
+		<h2>Samsung Galaxy S23</h2>
+		<p>A Samsung Galaxy S23 adpta o desenho individual da lente do S22 Ultra, abandonando o desenho da câmera ao estilo da ilha nos últimos dois anos. Mas a estética geral do aparelho não se afastou muito da S22, que não era assim tão diferente da S21. Mas esta série de telefones também recebe o Snapdragon globalmente, com o Snapdragon para Galaxy a ver a mudança para longe do Exynos. No entanto, o visor e as câmaras são essencialmente os mesmos que o Galaxy S22. Mais uma vez, há a versão normal de 6,1 polegadas e uma maior Galaxy S23+ de 6,6 polegadas.</p>	
+	</div>
+	<div class="section-content s23U">
+		<img class="celular" src="./btbb/s23U.png" alt="">
+		<h2>Samsung Galaxy S23 Ultra</h2>
+		<p>O melhor telefone da Samsung para 2023 é o Samsung Galaxy S23 Ultra. Há alguns grandes movimentos neste telefone, embora o design não mude em relação ao S22 Ultra. Em vez disso, é a mudança para uma câmera fotográfica de 200 megapixels, prometendo mais detalhes, melhores imagens com pouca luz e muito mais. Há o mesmo poder que os outros modelos S23, mas também retém a caneta S para interações adicionais no ecrã.</p>	
+	</div>
+	</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+    
+    $(".step").click( function() {
+	$(this).addClass("active").prevAll().addClass("active");
+	$(this).nextAll().removeClass("active");
+});
+
+$(".step01").click( function() {
+	$("#line-progress").css("width", "3%");
+	$(".discovery").addClass("active").siblings().removeClass("active");
+});
+
+$(".step02").click( function() {
+	$("#line-progress").css("width", "25%");
+	$(".strategy").addClass("active").siblings().removeClass("active");
+});
+
+$(".step03").click( function() {
+	$("#line-progress").css("width", "50%");
+	$(".creative").addClass("active").siblings().removeClass("active");
+});
+
+$(".step04").click( function() {
+	$("#line-progress").css("width", "75%");
+	$(".production").addClass("active").siblings().removeClass("active");
+});
+
+$(".step05").click( function() {
+	$("#line-progress").css("width", "100%");
+	$(".analysis").addClass("active").siblings().removeClass("active");
+});
+
+$(".step06").click( function() {
+	$("#line-progress2").css("width", "3%");
+	$(".s6").addClass("active").siblings().removeClass("active");
+});
+
+$(".step07").click( function() {
+	$("#line-progress2").css("width", "25%");
+	$(".s6e").addClass("active").siblings().removeClass("active");
+});
+
+$(".step08").click( function() {
+	$("#line-progress2").css("width", "50%");
+	$(".s7").addClass("active").siblings().removeClass("active");
+});
+
+$(".step09").click( function() {
+	$("#line-progress2").css("width", "75%");
+	$(".s7e").addClass("active").siblings().removeClass("active");
+});
+
+$(".step10").click( function() {
+	$("#line-progress2").css("width", "100%");
+	$(".s8").addClass("active").siblings().removeClass("active");
+});
+
+$(".step11").click( function() {
+	$("#line-progress3").css("width", "3%");
+	$(".s9").addClass("active").siblings().removeClass("active");
+});
+ 
+$(".step12").click( function() {
+	$("#line-progress3").css("width", "25%");
+	$(".s10").addClass("active").siblings().removeClass("active");
+});
+
+$(".step13").click( function() {
+	$("#line-progress3").css("width", "50%");
+	$(".s20").addClass("active").siblings().removeClass("active");
+});
+
+$(".step14").click( function() {
+	$("#line-progress3").css("width", "75%");
+	$(".s20U").addClass("active").siblings().removeClass("active");
+});
+
+$(".step15").click( function() {
+	$("#line-progress3").css("width", "100%");
+	$(".s20FE").addClass("active").siblings().removeClass("active");
+});
+
+$(".step16").click( function() {
+	$("#line-progress4").css("width", "3%");
+	$(".s21").addClass("active").siblings().removeClass("active");
+});
+
+$(".step17").click( function() {
+	$("#line-progress4").css("width", "25%");
+	$(".s21U").addClass("active").siblings().removeClass("active");
+});
+
+$(".step18").click( function() {
+	$("#line-progress4").css("width", "50%");
+	$(".s21fe").addClass("active").siblings().removeClass("active");
+});
+
+$(".step19").click( function() {
+	$("#line-progress4").css("width", "75%");
+	$(".s22").addClass("active").siblings().removeClass("active");
+});
+
+$(".step20").click( function() {
+	$("#line-progress4").css("width", "100%");
+	$(".s22u").addClass("active").siblings().removeClass("active");
+});
+
+$(".step21").click( function() {
+	$("#line-progress5").css("width", "3%");
+	$(".s23").addClass("active").siblings().removeClass("active");
+});
+
+$(".step22").click( function() {
+	$("#line-progress5").css("width", "100%");
+	$(".s23U").addClass("active").siblings().removeClass("active");
+});
+    </script>
+</body>
+</html>	
